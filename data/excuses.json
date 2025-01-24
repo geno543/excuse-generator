@@ -1,0 +1,48 @@
+{
+  "excuseTemplates": {
+    "funny": [
+      {
+        "template": "Sorry {targetPerson}, but {userName} couldn't make it to the {activity} because their pet unicorn needed emergency dance lessons. They were last seen practicing the tango at {location}.",
+        "category": "all"
+      },
+      {
+        "template": "Hey {targetPerson}, you won't believe this, but {userName} got caught in an epic battle between ninja squirrels and pirate raccoons on their way to {activity} at {location}. They had to serve as the referee!",
+        "category": "all"
+      },
+      {
+        "template": "{userName} was about to head to {activity}, but their alarm clock joined a union and went on strike. The negotiations are still ongoing.",
+        "category": "lateness"
+      }
+    ],
+    "professional": [
+      {
+        "template": "Dear {targetPerson}, due to an unexpected system upgrade in {userName}'s home automation setup, they were unable to attend the {activity} at {location}. The AI assistant is currently being reprogrammed.",
+        "category": "work"
+      },
+      {
+        "template": "I regret to inform you, {targetPerson}, that {userName} encountered an unprecedented scheduling conflict involving multiple time zones and a quantum physics experiment, preventing their attendance at the {activity}.",
+        "category": "all"
+      }
+    ],
+    "bizarre": [
+      {
+        "template": "Greetings {targetPerson}, {userName} was selected by aliens as Earth's representative for an intergalactic baking competition, making them miss the {activity} at {location}. They won silver!",
+        "category": "all"
+      },
+      {
+        "template": "{targetPerson}, you see, {userName}'s consciousness was temporarily uploaded to the cloud during a routine software update, causing them to miss the {activity}. The tech support is working on downloading them back.",
+        "category": "all"
+      }
+    ],
+    "dramatic": [
+      {
+        "template": "Oh {targetPerson}! {userName} was dramatically swept up in a flash mob of interpretive dancers on their way to {activity}, and their artistic integrity wouldn't let them leave until the performance was complete!",
+        "category": "all"
+      },
+      {
+        "template": "{targetPerson}, fate intervened most cruelly when {userName}'s attempt to reach {activity} at {location} was thwarted by a temporary temporal anomaly. The universe itself conspired against their attendance!",
+        "category": "all"
+      }
+    ]
+  }
+}

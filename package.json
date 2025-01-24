@@ -1,0 +1,14 @@
+{
+  "name": "excuse-generator",
+  "version": "1.0.0",
+  "description": "A fun excuse generator web application",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "@google/generative-ai": "^0.1.3",
+    "@google/gemini": "^1.0.0"
+  }
+}

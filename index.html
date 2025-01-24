@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Excuse Generator Pro</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎭 AI Excuse Generator Pro</h1>
+            <p class="subtitle">Powered by Google's Gemini AI</p>
+        </header>
+
+        <main>
+            <form id="excuse-form" class="user-input-form">
+                <div class="form-group">
+                    <div class="input-wrapper">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="user-name" placeholder="Your Name" class="input-field" required>
+                    </div>
+                    <div class="input-wrapper">
+                        <i class="fas fa-user-tie"></i>
+                        <input type="text" id="target-person" placeholder="To Whom (e.g., boss, teacher)" class="input-field" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <div class="input-wrapper">
+                        <i class="fas fa-calendar-alt"></i>
+                        <input type="text" id="activity" placeholder="What did you miss? (e.g., meeting, homework)" class="input-field" required>
+                    </div>
+                    <div class="input-wrapper">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <input type="text" id="location" placeholder="Where? (optional)" class="input-field">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="input-wrapper">
+                        <i class="fas fa-theater-masks"></i>
+                        <select id="tone-select" class="input-field" required>
+                            <option value="" disabled selected>Select Tone</option>
+                            <option value="funny">Funny 😄</option>
+                            <option value="professional">Professional 👔</option>
+                            <option value="bizarre">Bizarre 🌟</option>
+                            <option value="dramatic">Dramatic 🎭</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" id="generate-btn" class="generate-btn">
+                    <i class="fas fa-magic"></i> Generate Excuse
+                </button>
+            </form>
+
+            <div id="loading-spinner" class="loading-spinner hidden">
+                <div class="spinner"></div>
+                <p>Crafting your creative excuse...</p>
+            </div>
+
+            <div class="excuse-container">
+                <div class="excuse-header">
+                    <h3>Your Excuse</h3>
+                    <div class="excuse-actions">
+                        <button id="copy-btn" class="action-btn" title="Copy to Clipboard">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                        <button id="share-btn" class="action-btn" title="Share">
+                            <i class="fas fa-share-alt"></i>
+                        </button>
+                        <button id="save-btn" class="action-btn" title="Save to Favorites">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    </div>
+                </div>
+                <p id="excuse-text" class="excuse-text">
+                    Your creative excuse will appear here...
+                </p>
+            </div>
+
+            <div id="saved-excuses" class="saved-excuses hidden">
+                <h3>Saved Excuses</h3>
+                <div id="saved-excuses-list" class="saved-excuses-list">
+                    <!-- Saved excuses will be populated here -->
+                </div>
+            </div>
+        </main>
+
+        <div id="share-modal" class="modal hidden">
+            <div class="modal-content">
+                <h3>Share Excuse</h3>
+                <div class="share-buttons">
+                    <button id="share-whatsapp" class="share-btn whatsapp">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </button>
+                    <button id="share-twitter" class="share-btn twitter">
+                        <i class="fab fa-twitter"></i> Twitter
+                    </button>
+                    <button id="share-email" class="share-btn email">
+                        <i class="fas fa-envelope"></i> Email
+                    </button>
+                </div>
+                <button id="close-modal" class="close-modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+
+        <footer>
+            <p>Made with <i class="fas fa-heart"></i> by AI Excuse Generator Team</p>
+            <div class="theme-toggle">
+                <i class="fas fa-moon"></i>
+                <label class="switch">
+                    <input type="checkbox" id="theme-switch">
+                    <span class="slider round"></span>
+                </label>
+                <i class="fas fa-sun"></i>
+            </div>
+        </footer>
+    </div>
+    <div id="notification" class="notification"></div>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
